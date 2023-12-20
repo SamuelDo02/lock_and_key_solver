@@ -63,8 +63,8 @@ public class NodeView extends JPanel {
 
     public NodeView getCopy() {
         final Point startPoint = getLocation();
-        final Point endPoint = new Point(startPoint.x + getWidth() - 1,
-                startPoint.y + getHeight() - 1);
+        final Point endPoint = new Point(startPoint.x + getWidth(),
+                startPoint.y + getHeight());
         return new NodeView(startPoint, endPoint);
     }
 }
