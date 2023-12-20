@@ -95,7 +95,7 @@ public class NodeGroupView extends JLayeredPane {
     }
 
     // --- MODES ---
-    private CursorMode cursorMode = new CreateMode();
+    private CursorMode cursorMode = new EditMode();
 
     private interface CursorMode {
         void mousePressed(final MouseEvent e);
@@ -171,6 +171,9 @@ public class NodeGroupView extends JLayeredPane {
 
                 revalidate();
                 repaint();
+
+                // Reset back to edit mode
+                cursorMode = new EditMode();
             }
 
             // Reset selection
